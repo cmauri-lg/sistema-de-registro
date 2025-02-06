@@ -1,0 +1,59 @@
+Configuraciones
+git config --global user.name "nombredeusuario"
+git config --global user.email "email"
+git config --list = Comprueba Configuraciones de Git.
+
+git commit = Agrega  y guarda cada cambio en el proyecto
+Ejemplo: git commit -m "Agrega el index.html"
+
+git add . = Paso 1 para guardar desde repositorio local a remoto
+git commit -m "Mensaje" = Paso 2 para guardar desde repositorio local a remoto
+git push = Paso 3 .Sube los cambio desde repositorio local a remoto
+
+code . = Al estar ubicados en la direccion del proyecto se abre el proyecto en Visual Studio Code
+
+git status = Muestra si hay cambios o no en el proyecto (Estado del proyecto).
+
+git pull = Guarda los cambios de remoto a local
+
+git clone = Realiza una copia del repositorio remoto a local
+
+git log = Muestra el historial de commit(modificaciones).
+git lo --oneline = Muestra el historial de commmit de manera optimizada
+
+git diff = Ver los cambios actuales en tu copia de trabajo (Que es lo que se agrego, elimino o actualizo)
+
+git restore = Ir algun punto de los commit del proyecto (Navegar).
+Ejemplo: git restore --source fs8077e index.html
+
+git branch = Presenta las ramas que tenemos en nuestro proyecto
+ *nombredelaramadondeestamosubicados
+
+git branch "nombredelarama" = Crea una rama y se mantiene en la rama desde donde estamo creando 
+git switch "nombredelarama" = Crea una rama y se mantiene en la rama desde donde estamo creando 
+
+git checkout -b "Desarrollo" = Crea una nueva rama en el proyecto y se ubica en esa rama nueva 
+git checkout -b git branch nombredelarama = Crea una nueva rama en el proyecto y se ubica en esa rama nueva
+
+git switch "nombredelarama" = Ir a la rama donde quiero trabajar
+
+git push origin "nombredelarama" = Subir desde el local al remoto desde una rama diferente a main
+
+Para unir el trabajo de diferentes ramas 
+1. git log --oneline = Para ver el codigo del commit creado por la rama  
+2. git switch main = Nos ubicamos en la rama principal
+3. git merge nombredelaramaconlaquequierojuntar = Agrega en el git log los cambios que se hicieron en la otra rama 
+4. git push origin main = Agrega el cambio en el remoto
+
+git merge = Combinar los cambios de una rama con otra
+
+Para iniciar un proyecto en github
+1. Creo un proyecto en el repositorio en github
+2. Desde el explorador de archivos me ubico en la carpeta del proyecto 
+3. git init = inicializa el proyecto
+4. Realizo cambios en los archivos o creo archivos en VSC
+5. git add . 
+6. git commit -m "mensaje"
+7. git remote add origin https//:urldelproyectocreadoen1.
+8. git branch -M main = Cambio de master a main
+9. git push -u origin main = Subir al remoto los cambios del local 
